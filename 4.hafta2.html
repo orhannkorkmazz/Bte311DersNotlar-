@@ -4,10 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sınav Soruları</title>
+     <style>
+        .tarih-input
+
+        .tarih-input {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    </style>
 </head>
 <body>
+    
     <form method="get">
-        <input type="datetime-local" value="zaman">
+        <label>Adınız:<input type="text"></label><br>
+    <label>Soyadınız:<input type="text"></label><br>
+    <label>Numaranız:<input type="text"></label><br>
+        <input type="datetime-local" value="zaman" class="tarih-input" >
         <p>1-Aşağıdakilerden hangisi bir web sunucu programıdır?</p>
         <input type="radio" id=" Apache" name="question1" value="Apache">
         <label for="Apache">Apache</label><br>
