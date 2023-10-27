@@ -4,25 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sınav Soruları</title>
-     <style>
-        .tarih-input
-
-        .tarih-input {
-            position: absolute;
-            top: 0;
-            right: 0;
+    <style>
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10vh; /* Sayfa yüksekliği boyutu */
         }
     </style>
 </head>
 <body>
     
     <form method="get">
-        <tr>
-        <label>Adınız:<input type="text"></label><br></tr>
-   <tr> <label>Soyadınız:<input type="text"></label><br></tr>
-   <tr> <label>Numaranız:<input type="text"></label><br></tr>
-      <tr> <label>Lütfen Tarihi Giriniz:<input type="datetime-local" value="zaman" class="tarih-input"></label><br>
+        <table>
+            <tr>
+                <td><label>Adınız:</label></td>
+                
+                
+    <td><input type="text"></td>
             </tr>
+            <tr>
+                <td><label>Soyadınız:</label></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><label>Numaranız:</label></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><label>Lütfen Tarihi Giriniz:</label></td>
+                <td><input type="datetime-local" value="zaman" class="tarih-input"></td>
+            </tr>
+            
+        </table>
+        <div class="center">
+        
+       
+            <h2> SORULAR</h2>
+                </div>
         <p>1-Aşağıdakilerden hangisi bir web sunucu programıdır?</p>
         <input type="radio" id=" Apache" name="question1" value="Apache">
         <label for="Apache">Apache</label><br>
