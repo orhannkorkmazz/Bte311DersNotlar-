@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grit Layout Örneği</title>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 150px);
+      
+      gap: 10px;
+    }
+
+    .grid-item {
+      
+      
+      text-align: center;
+      
+    }
+
+    .grid-item.uzun {
+        padding: 20px;
+      grid-column: span 3;
+      grid-row: span 1;
+      
+    }
+
+    .grid-item.kare {
+        padding:50px;
+      grid-column: span 1;
+      grid-row: span 2;
+      
+    }
+
+    .grid-item.ikili {
+        padding: 30px;
+      grid-column: span 2;
+      grid-row: span 2;
+     
+    }
+
+    .grid-item.tekli {
+      grid-column: span 1;
+      grid-row: span 2;
+      padding: 30px;
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="grid-item uzun" style="background-color: rgba(6, 72, 163, 0.736)">A</div>
+    <div class="grid-item kare" style="background-color: peru">B</div>
+    <div class="grid-item kare" style="background-color: rgb(12, 208, 139)">C</div>
+    <div class="grid-item kare" style="background-color: orangered" >D</div>
+    <div class="grid-item ikili" style="background-color: rgb(172, 172, 11)">E</div>
+    <div class="grid-item tekli" style="background-color: purple">F</div>
+    <div class="grid-item uzun" style="background-color: rgb(6, 104, 5)">G</div>
+  </div>
+</body>
+</html>
