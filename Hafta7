@@ -1,0 +1,96 @@
+Yukarı aşağı gidip gelen:
+<div class="up-down"></div>
+css
+.up-down {
+  height: 50px;
+  width: 50px;
+  background-color: blue;
+  animation: upDown 1s infinite alternate;
+}
+
+@keyframes upDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100px);
+  }
+}
+Büyüyüp Küçülen ve rengi değişen:
+<div class="grow-shrink"></div>
+css
+.grow-shrink {
+  height: 50px;
+  width: 50px;
+  background-color: red;
+  animation: growShrink 2s infinite alternate, changeColor 4s infinite alternate;
+}
+
+@keyframes growShrink {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes changeColor {
+  50% {
+    background-color: green;
+  }
+}
+Git gide transparan değeri artan ve azalan:
+<div class="transparent"></div>
+css
+.transparent {
+  height: 50px;
+  width: 50px;
+  background-color: orange;
+  animation: transparentAnim 2s infinite alternate;
+}
+
+@keyframes transparentAnim {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+Sağa sola giden gelen:
+<div class="slide"></div>
+css
+.slide {
+  height: 50px;
+  width: 50px;
+  background-color: purple;
+  animation: slideAnim 2s infinite alternate;
+}
+
+@keyframes slideAnim {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
+Dönen:
+<div class="rotate"></div>
+css
+.rotate {
+  height: 50px;
+  width: 50px;
+  background-color: yellow;
+  animation: rotateAnim 2s infinite linear;
+}
+
+@keyframes rotateAnim {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
