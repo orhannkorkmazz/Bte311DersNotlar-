@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Up-Down</title>
+    <style>
+      .container{
+        display: flex;
+      }
+      .container > div { margin: 20px;}
+        .up-down {
+    height: 50px;
+    width: 50px;
+    background-color: blue;
+    animation: upDown 1s infinite alternate;
+  }
+  
+  @keyframes upDown {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(100px);
+    }
+  }
+  .grow-shrink {
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    animation: growShrink 2s infinite alternate, changeColor 4s infinite alternate;
+    
+  }
+  
+  @keyframes growShrink {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(2);
+    }
+  }
+  
+  @keyframes changeColor {
+    50% {
+      background-color: green;
+    }
+  }
+  css
+.transparent {
+  height: 50px;
+  width: 50px;
+  background-color: orange;
+  animation: transparentAnim 2s infinite alternate;
+}
+
+@keyframes transparentAnim {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.slide {
+    height: 75px;
+    width: 75px;
+    background-color: purple;
+    animation: slideAnim 2s infinite alternate, opacityAnimation 4s infinite alternate;
+    margin-left: 75px;
+    opacity: 20px;
+  }
+  
+  @keyframes slideAnim {
+    from {
+      transform: translateX(0);
+      
+    }
+    to {
+      transform: translateX(50px);
+      
+    }
+ 
+  }
+  @keyframes opacityAnimation{
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+
+}
+  .rotate {
+    height: 75px;
+    width: 75px;
+    background-color: yellow;
+    animation: rotateAnim 2s infinite ease;
+    position: absolute;
+    left: 400px;
+    
+    
+  }
+  
+  @keyframes rotateAnim {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="up-down"></div>
+    <div class="grow-shrink"></div>
+    <div class="transparent"></div>
+    <div class="slide"></div>
+    <div class="rotate"></div>
+</div>
+</body>
+</html>
