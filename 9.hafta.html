@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+       
+      .container{
+        display: flex;
+      }
+      
+    </style>
+</head>
+<body>
+    
+    <script>
+        ColorName=['red','yellow','pink','green','blue','darkblue','black','purple']
+        function RenkDegisimi() {
+            rastgeleindex=Math.floor(Math.random() * ColorName.length);
+            rastgelerenk=ColorName[rastgeleindex];
+            document.body.style.backgroundColor=rastgelerenk;
+        }
+        RenkDegisimi();
+        window.addEventListener('load',RenkDegisimi());
+    </script>
+    <div class="container" style=" margin:100px; width:100px; height: 100px;" >
+
+        <img id="image1" src="kedi.png" style=" margin:100px; width:100px; height: 100px;">
+        <button type="button" onclick="document.getElementById('image1').style.display='block'">Göster</button>
+        <button type="button" onclick="document.getElementById('image1').style.display='none'">Gizle</button>
+        </div>
+        <div class="container" style=" margin:100px; width:100px; height: 100px;" >
+        <img id="image2" src="kopek.png" style=" margin:100px; width:100px; height: 100px;">
+        <button type="button" onclick="document.getElementById('image2').style.display='block'">Göster</button>
+        <button type="button" onclick="document.getElementById('image2').style.display='none'">Gizle</button>
+        </div>
+    
+</body>
+</html>
