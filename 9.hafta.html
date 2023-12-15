@@ -3,38 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Rastgele Resimler</title>
     <style>
-       
-      .container{
-        display: flex;
-      }
-      
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+            height: 100vh;
+            
+        }
+
+        #background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .container {
+    display: flex;
+    
+}
+
+.image-container {
+    margin: 20px;
+   
+    text-align: center;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+}
+
+button {
+    margin-top: 10px;
+    
+}
+
+        .circle-frame {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    
+}
+
+.circle-frame img {
+    display: block;
+    width: 100%;
+    height: 100%;
+ 
+    border-radius: 50%;
+   
+}
+
     </style>
 </head>
 <body>
-    
-    <script>
-        ColorName=['red','yellow','pink','green','blue','darkblue','black','purple']
-        function RenkDegisimi() {
-            rastgeleindex=Math.floor(Math.random() * ColorName.length);
-            rastgelerenk=ColorName[rastgeleindex];
-            document.body.style.backgroundColor=rastgelerenk;
-        }
-        RenkDegisimi();
-        window.addEventListener('load',RenkDegisimi());
-    </script>
-    <div class="container" style=" margin:100px; width:100px; height: 100px;" >
 
-        <img id="image1" src="kedi.png" style=" margin:100px; width:100px; height: 100px;">
-        <button type="button" onclick="document.getElementById('image1').style.display='block'">Göster</button>
-        <button type="button" onclick="document.getElementById('image1').style.display='none'">Gizle</button>
+    <script>
+        function randomRGB() {
+            const r = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+            return `rgb(${r}, ${g}, ${b})`;
+        }
+
+        function setRandomBackgroundColor() {
+            document.body.style.backgroundColor = randomRGB();
+        }
+
+        function toggleImage(imageId) {
+            const image = document.getElementById(imageId);
+            image.style.display = image.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function showRandomCircleImage() {
+            const circleFrame = document.getElementById('circle-frame');
+              // Klasördeki resim dosyalarını al
+              const folderPath = "images/"; // Klasör yolu
+            const images = ["image11.jpg", "image12.jpg", "image13.jpg", "image4.jpg", "image5.jpg", "image6.jpg", "image7.jpg", "image8.jpg", "image9.jpg", "image10.jpg"];
+            const randomIndex = Math.floor(Math.random() * images.length);
+            const imageUrl = folderPath + images[randomIndex];
+
+            circleFrame.innerHTML = `<img src="${imageUrl}" >`;
+        }
+
+        window.addEventListener('load', function () {
+            setRandomBackgroundColor();
+            showRandomCircleImage();
+        });
+    </script>
+
+    <div id="background-image"></div>
+
+    <div class="container">
+        <div class="image-container">
+            <img id="image1" src="images/image1.jpg">
+            <button type="button" onclick="toggleImage('image1')">Göster/Gizle</button>
         </div>
-        <div class="container" style=" margin:100px; width:100px; height: 100px;" >
-        <img id="image2" src="kopek.png" style=" margin:100px; width:100px; height: 100px;">
-        <button type="button" onclick="document.getElementById('image2').style.display='block'">Göster</button>
-        <button type="button" onclick="document.getElementById('image2').style.display='none'">Gizle</button>
+        <div class="image-container">
+            <img id="image2" src="images/image2.jpg">
+            <button type="button" onclick="toggleImage('image2')">Göster/Gizle</button>
         </div>
+        <div class="image-container">
+            <img id="image3" src="images/image3.jpg">
+            <button type="button" onclick="toggleImage('image3')">Göster/Gizle</button>
+        </div>
+    </div>
+
+    <div class="circle-frame" id="circle-frame"></div>
     
+
 </body>
 </html>
