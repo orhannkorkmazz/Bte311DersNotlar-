@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+
+    <canvas id="canvas">
+
+    </canvas>
+   <script>
+
+
+const ctx = document.getElementById("canvas").getContext("2d");
+
+for (let i = 0; i < 6; i++) {
+    for (let j = 0; j < 6; j++){
+        const letters ='012345789ABCDEF';
+        var renk ='#';
+
+            ctx.beginPath();
+
+        for(var k= 0; k<6; k++){
+            renk += letters[Math.floor(Math.random()*16)];
+        }
+
+    ctx.arc(12+i*25 , 12+j*25, 10, 0, 2 * Math.PI, true);
+   
+    ctx.strokeStyle = renk;
+    ctx.stroke();
+
+}
+}
+
+
+
+   </script> 
+
+</body>
+</html>
