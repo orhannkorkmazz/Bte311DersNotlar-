@@ -1,0 +1,46 @@
+body {
+    font-family: Arial;
+    margin:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+  }
+  
+  .duyuru-container {
+    display: none;
+    
+    top: 50px;
+    left: 50px;
+    background-color: #3d0202;
+    padding: 200px;
+    border: 1px solid #ccc;
+    
+    box-shadow: 0 0 10px rgba(247, 239, 239, 0.3);
+    max-width: 300px;
+    text-align: center;
+    
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+   
+  }
+  
+  .duyuru-content {
+    position: relative;
+    text-align: center;
+  }
+  .duyuru-content p {
+   color:white
+  }
+  
+  .close-btn {
+    
+    top: 0;
+    right: 0;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  
