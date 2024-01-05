@@ -20,12 +20,13 @@ if ($conn->connect_error) {
 /*
 
 
+
 // Create database
 $sql = "CREATE DATABASE IF NOT EXISTS myDB";
 if ($conn->query($sql) === TRUE) {
-    echo "Database created successfully";
+    echo "Veri Tabanı Başarıyla oluşturuldu";
 } else {
-    echo "Error creating database: " . $conn->error;
+    echo "Veri tabanı oluşturulurken hata oluştu " . $conn->error;
 }
 
 // Select the created database
@@ -39,14 +40,14 @@ $tablo = "CREATE TABLE IF NOT EXISTS MyGuests (
     email VARCHAR(50)
 )";
 if ($conn->query($tablo) === TRUE) {
-    echo "Table created successfully";
+    echo "Tablo Başarıyla oluşturuldu";
 } else {
-    echo "Error creating table: " . $conn->error;
+    echo "Tablo oluşturulurken hata meydana geldi: " . $conn->error;
 }
 */
 $conn->select_db("myDB");
 ?>
-<h1>HTML Form</h1> 
+<h1>Kullanıcı Kayıt Formu</h1> 
 <form action="insert.php" method="POST"> 
     <label>Name: </label>
     <input type="text" name="u_name" placeholder="Name"><br><br> 
