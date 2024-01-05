@@ -56,9 +56,8 @@ $conn->select_db("myDB");
     <label>Email: </label> 
     <input type="email" name="u_email" placeholder="Email"><br><br> 
     <input type="submit" value="Kaydet"> 
-    <br>
-    <br>
-    <a href="select.php">Tabloyu Görüntüle</a>
+   
+    
 
 </form>
 
