@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$veritabani = "test";
+
 // Create connection
 $conn = new mysqli($servername, $username, $password);
 // Check connection
@@ -16,7 +16,7 @@ $email = $_POST["u_email"];
 
 $conn->select_db("myDB");
 
-$sql = "INSERT INTO MyGuests (firstname, lastname, email) VALUES ('$name', $lname, '$email')";
+$sql = "INSERT INTO MyGuests (firstname, lastname, email) VALUES ('$name', '$lname', '$email')";
 $query = mysqli_query($conn, $sql);
 echo $query;
 
