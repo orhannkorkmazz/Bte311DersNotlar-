@@ -44,7 +44,7 @@ if ($result === false) {
 if ($result->num_rows > 0) {
     echo "<h1>Kaydedilen veriler</h1>";
     echo "<table>";
-    echo "<tr><th>ID</th><th>İsim</th><th>Yaş</th><th>Email</th></tr>";
+    echo "<tr><th>ID</th><th>İsim</th><th>Soyisim</th><th>Email</th></tr>";
 
     while($row = $result->fetch_assoc()) {
         echo "<tr><td>" . $row["id"]. "</td><td>" . $row["firstname"]. "</td><td>" . $row["lastname"]. "</td><td>" . $row["email"]. "</td></tr>";
@@ -52,7 +52,7 @@ if ($result->num_rows > 0) {
 
     echo "</table>";
 } else {
-    echo "No data found";
+    echo "Veri Bulunamadı";
 }
 
 $conn->close();
