@@ -26,3 +26,5 @@ if ($result->num_rows > 0) {
 
 $conn->close();
 ?>
+<br>
+<a href="13_Odev.php">Form Sayfasına Geri Dön</a>
