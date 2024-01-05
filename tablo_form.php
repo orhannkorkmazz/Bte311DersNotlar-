@@ -11,9 +11,9 @@
         $satir_sayisi = (int)$_POST['satir'];
 $sutun_sayisi = (int)$_POST['sutun'];
 echo '<table border=1>';
-for ($i=1; $i<$satir_sayisi;$i++){
+for ($i=1; $i<=$satir_sayisi;$i++){
     echo '<tr>';
-    for ($j=1; $j<$sutun_sayisi;$j++){
+    for ($j=1; $j<=$sutun_sayisi;$j++){
         $rastgele_sayi=rand(1,100);
         echo '<td>' . $rastgele_sayi . '</td>';
     }
