@@ -19,7 +19,12 @@ $conn->select_db("myDB");
 $sql = "INSERT INTO MyGuests (firstname, lastname, email) VALUES ('$name', '$lname', '$email')";
 $query = mysqli_query($conn, $sql);
 echo $query;
+echo "Veri Başarıyla Kaydedildi";
 
 
 $conn->close();
+
 ?>
+<br>
+<br>
+<a href="select.php">Tabloyu Görüntüle</a>
