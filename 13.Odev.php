@@ -49,10 +49,10 @@ $conn->select_db("myDB");
 ?>
 <h1>Kullanıcı Kayıt Formu</h1> 
 <form action="insert.php" method="POST"> 
-    <label>Name: </label>
-    <input type="text" name="u_name" placeholder="Name"><br><br> 
-    <label>LastName: </label> 
-    <input type="text" name="u_lname" placeholder="Lastname"><br><br> 
+    <label>İsim: </label>
+    <input type="text" name="u_name" placeholder="İsim"><br><br> 
+    <label>Soyisim: </label> 
+    <input type="text" name="u_lname" placeholder="Soyisim"><br><br> 
     <label>Email: </label> 
     <input type="email" name="u_email" placeholder="Email"><br><br> 
     <input type="submit" value="Kaydet"> 
@@ -60,5 +60,13 @@ $conn->select_db("myDB");
     
 
 </form>
+<h1>Kullanıcı Bilgilerini Getir</h1>
+<form action="user.php" method="POST">
+    <label>İsim: </label>
+    <input type="text" name="search_name" placeholder="İsime göre ara..">
+    <input type="submit" value="Bul">
+</form>
 
+</body>
+</html>
 </html>
